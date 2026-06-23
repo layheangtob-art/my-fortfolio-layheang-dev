@@ -39,7 +39,15 @@ onUnmounted(() => {
   <header class="site-header">
     <a href="#home" class="logo-wrap" aria-label="Portfolio home">
       <!-- <span class="logo-mark">G</span> -->
-      <span class="logo-name">Tob_Layheang</span>
+      <span class="logo-name">
+        Tob_Layheang
+        <span class="logo-aurora" aria-hidden="true">
+          <span class="logo-aurora__item"></span>
+          <span class="logo-aurora__item"></span>
+          <span class="logo-aurora__item"></span>
+          <span class="logo-aurora__item"></span>
+        </span>
+      </span>
     </a>
 
     <nav class="top-nav" aria-label="Main navigation"></nav>

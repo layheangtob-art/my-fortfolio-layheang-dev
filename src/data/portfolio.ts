@@ -52,10 +52,11 @@ export const navItems: NavItem[] = [
 ]
 
 export const stats: StatItem[] = [
-  { value: '14', label: 'Years Of Experience' },
-  { value: '50+', label: 'Projects Completed' },
-  { value: '1.5K', label: 'Code Commits' },
-  { value: '14', label: 'Happy Clients' },
+  { value: '5+', label: 'Projects Completed' },
+  { value: '4+', label: 'Tech Stacks' },
+  { value: '1+', label: 'Years Of Experience' },
+  
+  // { value: '14', label: 'Happy Clients' },
 ]
 
 export const services: ServiceItem[] = [

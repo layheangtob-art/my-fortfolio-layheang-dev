@@ -18,7 +18,7 @@
         <span class="detail-icon">C</span>
         <div>
           <p>Call Me</p>
-          <strong>+855 12 345 678</strong>
+          <strong>+855 855 481 01</strong>
         </div>
       </article>
 
@@ -26,7 +26,7 @@
         <span class="detail-icon">E</span>
         <div>
           <p>Email</p>
-          <strong>layheang@example.com</strong>
+          <strong>layheangtob@gmail.com</strong>
         </div>
       </article>
 

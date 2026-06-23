@@ -9,11 +9,7 @@ defineProps<{
 
 <template>
   <section class="section-block skills-block">
-    <SectionHeader
-      eyebrow="My Skills"
-      title="Tools and platforms I work with"
-      centered
-    />
+    <SectionHeader eyebrow="My Skills" title="Tools and platforms I work with" centered />
 
     <div class="skills-grid">
       <article v-for="item in items" :key="item.name" class="skill-card">
