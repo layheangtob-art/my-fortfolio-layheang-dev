@@ -1,11 +1,10 @@
 <template>
   <footer class="site-footer">
-    <div class="footer-logo">G</div>
-    <p>Copyright 2026. All rights reserved.</p>
+    <p>© 2026 LayHeang Tob. All rights reserved.</p>
     <div class="footer-socials">
-      <a href="/" aria-label="Facebook">Fb</a>
-      <a href="/" aria-label="Instagram">Ig</a>
-      <a href="/" aria-label="GitHub">Gh</a>
+      <a href="https://github.com/layheangtob-art" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a>
+      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
+      <a href="#home" aria-label="Back to top">Top</a>
     </div>
   </footer>
 </template>

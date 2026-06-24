@@ -1,25 +1,22 @@
 <script setup lang="ts">
 import AppHeader from "./components/portfolio/AppHeader.vue";
-import BlogsSection from "./components/portfolio/BlogsSection.vue";
-import ContactSection from "./components/portfolio/ContactSection.vue";
+import AchievementsSection from "./components/portfolio/AchievementsSection.vue";
 import HeroSection from "./components/portfolio/HeroSection.vue";
-import ResumeSection from "./components/portfolio/ResumeSection.vue";
-import ServicesSection from "./components/portfolio/ServicesSection.vue";
 import SiteFooter from "./components/portfolio/SiteFooter.vue";
 import SkillsSection from "./components/portfolio/SkillsSection.vue";
 import StatsGrid from "./components/portfolio/StatsGrid.vue";
-import TestimonialsSection from "./components/portfolio/TestimonialsSection.vue";
+import TimelineSection from "./components/portfolio/TimelineSection.vue";
+import VisualHighlightsSection from "./components/portfolio/VisualHighlightsSection.vue";
 import WorksSection from "./components/portfolio/WorksSection.vue";
 import {
-  blogPosts,
+  achievements,
   education,
   experience,
-  featuredWorks,
+  featuredProjects,
   navItems,
-  services,
-  skillItems,
   stats,
-  testimonials,
+  techStack,
+  visualHighlights,
 } from "./data/portfolio";
 </script>
 
@@ -33,13 +30,22 @@ import {
       <AppHeader :items="navItems" />
       <HeroSection />
       <StatsGrid :items="stats" />
-      <ServicesSection :items="services" />
-      <WorksSection :items="featuredWorks" />
-      <ResumeSection :experience="experience" :education="education" />
-      <SkillsSection :items="skillItems" />
-      <TestimonialsSection :items="testimonials" />
-      <BlogsSection :items="blogPosts" />
-      <ContactSection />
+      <TimelineSection
+        section-id="experience"
+        title="Experience"
+        icon="briefcase"
+        :items="experience"
+      />
+      <TimelineSection
+        section-id="education"
+        title="Education"
+        icon="graduation"
+        :items="education"
+      />
+      <SkillsSection :items="techStack" />
+      <VisualHighlightsSection :items="visualHighlights" />
+      <WorksSection :items="featuredProjects" />
+      <AchievementsSection :items="achievements" />
       <SiteFooter />
     </main>
   </div>

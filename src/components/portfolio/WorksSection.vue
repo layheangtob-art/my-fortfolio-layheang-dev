@@ -1,28 +1,53 @@
 <script setup lang="ts">
-import type { WorkItem } from '../../data/portfolio'
-import SectionHeader from './SectionHeader.vue'
+import type { ProjectItem } from "../../data/portfolio";
 
 defineProps<{
-  items: WorkItem[]
-}>()
+  items: ProjectItem[];
+}>();
 </script>
 
 <template>
-  <section id="works" class="section-block">
-    <SectionHeader
-      eyebrow="My Recent Works"
-      title="Selected interfaces and product design pieces"
-      centered
-    />
+  <section id="projects" class="section-block projects-section">
+    <header class="section-heading">
+      <h2>Featured Projects</h2>
+      <p>Selected builds that combine clean UI, practical engineering, and real product thinking.</p>
+    </header>
 
-    <div class="works-grid">
-      <article v-for="work in items" :key="work.title" class="work-card">
-        <div class="work-preview" :class="`tone-${work.tone}`">
-          <div class="work-screen"></div>
+    <div class="projects-grid">
+      <article
+        v-for="project in items"
+        :key="project.title"
+        class="project-card"
+      >
+        <div class="project-preview" :class="`tone-${project.tone}`">
+          <div class="project-screen"></div>
         </div>
-        <div class="work-copy">
-          <p>{{ work.tag }}</p>
-          <h3>{{ work.title }}</h3>
+
+        <div class="project-copy">
+          <h3>{{ project.title }}</h3>
+          <p>{{ project.description }}</p>
+          <ul class="project-stack">
+            <li v-for="tech in project.stack" :key="tech">{{ tech }}</li>
+          </ul>
+
+          <div class="project-links">
+            <a
+              v-if="project.github"
+              :href="project.github"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
+            <a
+              v-if="project.live"
+              :href="project.live"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Live Demo
+            </a>
+          </div>
         </div>
       </article>
     </div>
