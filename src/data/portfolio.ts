@@ -4,6 +4,9 @@ import ruppLogo from "../assets/logos/ruppLogo.png";
 import aecLogo from "../assets/logos/aceLogo.png";
 import ruppGroupPhoto from "../assets/highlights/rupp1.jpg";
 import ruppGroupPhoto2 from "../assets/highlights/rupp2.jpg";
+import ruppGroupPhoto3 from "../assets/highlights/rupp3.jpeg";
+import ruppGroupPhoto4 from "../assets/highlights/rupp4.png";
+import khmerNewsPortal from "../assets/projects/1.png";
 
 export interface NavItem {
   label: string;
@@ -47,6 +50,8 @@ export interface ProjectItem {
   description: string;
   stack: string[];
   tone: "purple" | "silver" | "violet" | "dark";
+  image?: string;
+  alt?: string;
   github?: string;
   live?: string;
 }
@@ -138,13 +143,13 @@ export const education: TimelineItem[] = [
 ];
 
 export const techStack: TechStackItem[] = [
-  // { name: 'React.js', icon: 'react', color: '61DAFB' },
-  // { name: 'Next.js', icon: 'nextdotjs', color: 'FFFFFF' },
+  { name: "HTML", icon: "html5", color: "F54927" },
+  { name: "CSS", icon: "css", color: "663399" },
+  { name: "JavaScript", icon: "javascript", color: "F7DF1E" },
   { name: "Vue.js", icon: "vuedotjs", color: "41B883" },
   { name: "TypeScript", icon: "typescript", color: "3178C6" },
-  { name: "JavaScript", icon: "javascript", color: "F7DF1E" },
   { name: "Tailwind CSS", icon: "tailwindcss", color: "06B6D4" },
-  // { name: 'Node.js', icon: 'nodedotjs', color: '339933' },
+  { name: "Figma", icon: "figma", color: "ffffff" },
   // { name: 'Express.js', icon: 'express', color: 'FFFFFF' },
   // { name: 'NestJS', icon: 'nestjs', color: 'E0234E' },
   { name: "PHP", icon: "php", color: "777BB4" },
@@ -162,7 +167,7 @@ export const techStack: TechStackItem[] = [
   { name: "Figma", icon: "figma", color: "F24E1E" },
   { name: "Vercel", icon: "vercel", color: "FFFFFF" },
   { name: "Render", icon: "render", color: "FFFFFF" },
-  { name: "Railway", icon: "railway", color: "FFFFFF" },
+  // { name: "Railway", icon: "railway", color: "FFFFFF" },
   { name: "Hostinger", icon: "hostinger", color: "673DE6" },
   { name: "Cloudflare", icon: "cloudflare", color: "faae40" },
 ];
@@ -175,24 +180,40 @@ export const visualHighlights: HighlightItem[] = [
     image: ruppGroupPhoto,
     alt: "Group photo at Royal University of Phnom Penh",
   },
-  { title: "Dashboard Concept", 
-    tone: "blue", 
-    span: "normal" ,
+  {
+    title: "RUPP Campus 2",
+    tone: "blue",
+    span: "normal",
     image: ruppGroupPhoto2,
   },
-  { title: "Mobile Layout", tone: "green", span: "wide" },
-  { title: "Brand System", tone: "orange", span: "normal" },
-  { title: "Landing Page", tone: "violet", span: "tall" },
+  {
+    title: "Final Defense Year 4",
+    tone: "green",
+    span: "tall",
+    image: ruppGroupPhoto4,
+  },
+  { title: "Brand System", 
+    tone: "orange", 
+    span: "tall" 
+  },
+  {
+    title: "Landing Page",
+    tone: "violet",
+    span: "tall",
+    image: ruppGroupPhoto3,
+  },
   { title: "Component Library", tone: "silver", span: "normal" },
 ];
 
 export const featuredProjects: ProjectItem[] = [
   {
-    title: "Personal Portfolio",
+    title: "Design and develop News Portal using Laravel 12 ",
     description:
       "A dark-themed portfolio with animated hero, timeline experience, and responsive project showcase.",
     stack: ["Vue 3", "TypeScript", "CSS"],
     tone: "purple",
+    image: khmerNewsPortal,
+    alt: "Khmer News Portal homepage screenshot",
     github: "https://github.com/layheangtob-art",
     live: "#home",
   },

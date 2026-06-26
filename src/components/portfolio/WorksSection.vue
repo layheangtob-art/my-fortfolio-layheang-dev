@@ -20,7 +20,14 @@ defineProps<{
         class="project-card"
       >
         <div class="project-preview" :class="`tone-${project.tone}`">
-          <div class="project-screen"></div>
+          <img
+            v-if="project.image"
+            :src="project.image"
+            :alt="project.alt ?? project.title"
+            class="project-image"
+            loading="lazy"
+          />
+          <div v-else class="project-screen"></div>
         </div>
 
         <div class="project-copy">

@@ -1241,6 +1241,14 @@ button {
   background: rgba(0, 0, 0, 0.22);
 }
 
+.project-image {
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+  object-fit: cover;
+  object-position: top center;
+}
+
 .project-screen {
   width: 84%;
   height: 76%;
