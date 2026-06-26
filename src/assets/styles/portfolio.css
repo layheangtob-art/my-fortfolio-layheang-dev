@@ -872,6 +872,21 @@ button {
   letter-spacing: 0.04em;
   background: linear-gradient(180deg, rgba(56, 189, 248, 0.28), rgba(15, 23, 42, 0.95));
   border: 1px solid rgba(148, 163, 184, 0.18);
+  overflow: hidden;
+}
+
+.experience-logo--image {
+  width: 48px;
+  height: 48px;
+  padding: 3px;
+  background: #f1f5f9;
+  border-color: rgba(148, 163, 184, 0.22);
+}
+
+.experience-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .experience-brand-copy h3 {
@@ -1119,6 +1134,59 @@ button {
 .highlight-media {
   position: absolute;
   inset: 0;
+}
+
+.highlight-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.highlight-card--interactive {
+  cursor: pointer;
+}
+
+.highlight-card--interactive::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 45%, rgba(2, 6, 23, 0.82));
+  pointer-events: none;
+  z-index: 0;
+}
+
+.highlight-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(2, 6, 23, 0.88);
+  backdrop-filter: blur(8px);
+}
+
+.highlight-lightbox__image {
+  max-width: min(100%, 1100px);
+  max-height: calc(100vh - 48px);
+  border-radius: 12px;
+  object-fit: contain;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.45);
+}
+
+.highlight-lightbox__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.82);
+  color: #f8fafc;
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
 }
 
 .highlight-card p {

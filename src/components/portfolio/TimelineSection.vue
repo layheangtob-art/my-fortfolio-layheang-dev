@@ -81,13 +81,26 @@ onUnmounted(() => {
         <div class="experience-card">
           <header class="experience-card-top">
             <div class="experience-brand">
-              <span class="experience-logo">{{ item.initials }}</span>
+              <span
+                class="experience-logo"
+                :class="{ 'experience-logo--image': item.logo }"
+              >
+                <img
+                  v-if="item.logo"
+                  :src="item.logo"
+                  :alt="`${item.company} logo`"
+                />
+                <template v-else>{{ item.initials }}</template>
+              </span>
               <div class="experience-brand-copy">
                 <h3>{{ item.company }}</h3>
                 <div class="experience-tags">
                   <span class="experience-role-tag">{{ item.roleTag }}</span>
                   <span v-if="item.isCurrent" class="experience-status">
-                    <span class="experience-status-dot" aria-hidden="true"></span>
+                    <span
+                      class="experience-status-dot"
+                      aria-hidden="true"
+                    ></span>
                     Current
                   </span>
                 </div>
