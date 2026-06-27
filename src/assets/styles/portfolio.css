@@ -1105,9 +1105,9 @@ button {
 
 .highlights-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 2fr));
   grid-auto-rows: 130px;
-  gap: 12px;
+  gap: 10px;
 }
 
 .highlight-card {
@@ -1274,6 +1274,18 @@ button {
   color: #94a3b8;
   line-height: 1.65;
   font-size: 0.9rem;
+}
+
+.project-details {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: #94a3b8;
+  line-height: 1.65;
+  font-size: 0.9rem;
+}
+
+.project-details li + li {
+  margin-top: 6px;
 }
 
 .project-stack {

@@ -32,7 +32,10 @@ defineProps<{
 
         <div class="project-copy">
           <h3>{{ project.title }}</h3>
-          <p>{{ project.description }}</p>
+          <p v-if="typeof project.description === 'string'">{{ project.description }}</p>
+          <ul v-else class="project-details">
+            <li v-for="detail in project.description" :key="detail">{{ detail }}</li>
+          </ul>
           <ul class="project-stack">
             <li v-for="tech in project.stack" :key="tech">{{ tech }}</li>
           </ul>

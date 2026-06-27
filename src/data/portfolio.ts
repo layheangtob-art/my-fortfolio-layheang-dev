@@ -6,7 +6,10 @@ import ruppGroupPhoto from "../assets/highlights/rupp1.jpg";
 import ruppGroupPhoto2 from "../assets/highlights/rupp2.jpg";
 import ruppGroupPhoto3 from "../assets/highlights/rupp3.jpeg";
 import ruppGroupPhoto4 from "../assets/highlights/rupp4.png";
+import ruppGroupPhoto5 from "../assets/highlights/rupp5.jpg";
+import ruppGroupPhoto6 from "../assets/highlights/rupp6.png";
 import khmerNewsPortal from "../assets/projects/1.png";
+import wearplus from "../assets/projects/2.png";
 
 export interface NavItem {
   label: string;
@@ -40,14 +43,14 @@ export interface TechStackItem {
 export interface HighlightItem {
   title: string;
   tone: "purple" | "blue" | "green" | "orange" | "violet" | "silver";
-  span: "normal" | "tall" | "wide";
+  span: "normal" | "tall" | "wide" | "wide-tall";
   image?: string;
   alt?: string;
 }
 
 export interface ProjectItem {
   title: string;
-  description: string;
+  description: string | string[];
   stack: string[];
   tone: "purple" | "silver" | "violet" | "dark";
   image?: string;
@@ -150,26 +153,20 @@ export const techStack: TechStackItem[] = [
   { name: "TypeScript", icon: "typescript", color: "3178C6" },
   { name: "Tailwind CSS", icon: "tailwindcss", color: "06B6D4" },
   { name: "Figma", icon: "figma", color: "ffffff" },
-  // { name: 'Express.js', icon: 'express', color: 'FFFFFF' },
-  // { name: 'NestJS', icon: 'nestjs', color: 'E0234E' },
   { name: "PHP", icon: "php", color: "777BB4" },
   { name: "Laravel", icon: "laravel", color: "FF2D20" },
   { name: "RESTful APIs", icon: "swagger", color: "85EA2D" },
   { name: "Postman", icon: "postman", color: "FF6C37" },
   { name: "MySQL", icon: "mysql", color: "4479A1" },
-  // { name: 'PostgreSQL', icon: 'postgresql', color: '4169E1' },
-  // { name: 'Git', icon: 'git', color: 'F05032' },
   { name: "GitHub", icon: "github", color: "FFFFFF" },
   { name: "Docker", icon: "docker", color: "2496ED" },
-  // { name: 'Jenkins', icon: 'jenkins', color: 'D24939' },
-  // { name: 'Ansible', icon: 'ansible', color: 'EE0000' },
-  // { name: 'Kubernetes', icon: 'kubernetes', color: '326CE5' },
   { name: "Figma", icon: "figma", color: "F24E1E" },
   { name: "Vercel", icon: "vercel", color: "FFFFFF" },
-  { name: "Render", icon: "render", color: "FFFFFF" },
-  // { name: "Railway", icon: "railway", color: "FFFFFF" },
   { name: "Hostinger", icon: "hostinger", color: "673DE6" },
   { name: "Cloudflare", icon: "cloudflare", color: "faae40" },
+  { name: "Adobe Photoshop", icon: "adobephotoshop" },
+  { name: "Adobe Illustrator", icon: "adobeillustrator" },
+  { name: "Adobe After Effects", icon: "adobeaftereffects" },
 ];
 
 export const visualHighlights: HighlightItem[] = [
@@ -192,41 +189,55 @@ export const visualHighlights: HighlightItem[] = [
     span: "tall",
     image: ruppGroupPhoto4,
   },
-  { title: "Brand System", 
+  { title: "...", 
     tone: "orange", 
-    span: "tall" 
+    span: "tall" ,
+    image: ruppGroupPhoto5,
   },
   {
-    title: "Landing Page",
+    title: "Final Defense At ANT Training Center",
     tone: "violet",
     span: "tall",
     image: ruppGroupPhoto3,
   },
-  { title: "Component Library", tone: "silver", span: "normal" },
+  { title: "...", 
+    tone: "silver", 
+    span: "normal" ,
+    image: ruppGroupPhoto6,
+  },
 ];
 
 export const featuredProjects: ProjectItem[] = [
   {
     title: "Design and develop News Portal using Laravel 12 ",
-    description:
-      "A dark-themed portfolio with animated hero, timeline experience, and responsive project showcase.",
-    stack: ["Vue 3", "TypeScript", "CSS"],
+    description: [
+      "The system is a web-based news application for users in Cambodia.",
+      "It allows users to read the latest and trending news online.",
+      "The system has two main roles: User (Reader) and Admin (Manage).",
+      "Users can browse, search, read news articles easily and dark mode.",
+      "Admin can manage news content (add, edit, delete) through a secure dashboard.",
+      "News is organized into categories such as local news, international news, technology, sport, and entertainment.",
+      "The website provides a Khmer audio reader.",
+    ],
+    stack: ["PHP Laravel ", "CSS", "JavaScript", "MySQL"],
     tone: "purple",
     image: khmerNewsPortal,
     alt: "Khmer News Portal homepage screenshot",
     github: "https://github.com/layheangtob-art",
-    live: "#home",
+    live: "https://kh-news.shop/",
   },
   {
-    title: "Task Manager App",
+    title: "WearPlus-E-Commerce ",
     description:
       "A productivity app with drag-and-drop boards, filters, and clean dashboard interactions.",
     stack: ["Vue", "Pinia", "Tailwind"],
     tone: "violet",
+    image: wearplus,
     github: "https://github.com/layheangtob-art",
+    live: "https://wear-plus-next-js-prisma-pogre-sql-e-commerce.vercel.app/",
   },
   {
-    title: "E-Commerce UI",
+    title: "Phsar Baitong",
     description:
       "Product listing and checkout flow focused on conversion, clarity, and mobile-first layout.",
     stack: ["Vue", "REST API", "CSS"],

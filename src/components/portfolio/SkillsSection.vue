@@ -6,6 +6,19 @@ defineProps<{
 }>();
 
 function iconSrc(item: TechStackItem) {
+  const customIconUrls: Record<string, string> = {
+    adobephotoshop: "https://api.iconify.design/logos/adobe-photoshop.svg",
+    adobeillustrator: "https://api.iconify.design/logos/adobe-illustrator.svg",
+    adobeindesign: "https://api.iconify.design/logos/adobe-indesign.svg",
+    adobepremierepro: "https://api.iconify.design/logos/adobe-premiere.svg",
+    adobeaftereffects: "https://api.iconify.design/logos/adobe-after-effects.svg",
+    adobelightroom: "https://api.iconify.design/logos/adobe-lightroom.svg",
+    adobexd: "https://api.iconify.design/logos/adobe-xd.svg",
+  };
+
+  const custom = customIconUrls[item.icon];
+  if (custom) return custom;
+
   if (item.color) {
     return `https://cdn.simpleicons.org/${item.icon}/${item.color}`;
   }
