@@ -45,12 +45,13 @@ import {
       />
       <SkillsSection :items="techStack" />
       <VisualHighlightsSection :items="visualHighlights" />
-      <WorksSection :items="featuredProjects" />
+      <WorksSection :items="featuredProjects" carousel />
       <WorksSection
         section-id="ux-ui"
         title="Featured UX/UI"
         subtitle="Selected designs that focus on clarity, usability, and polished visual storytelling."
         :items="uxUiProjects"
+        carousel
       />
       <AchievementsSection :items="achievements" />
       <SiteFooter />

@@ -11,7 +11,7 @@ import ruppGroupPhoto6 from "../assets/highlights/rupp6.png";
 import khmerNewsPortal from "../assets/projects/1.png";
 import wearplus from "../assets/projects/2.png";
 import khmerNewsUxUi from "../assets/projects/khmer-news-ux-ui.png";
-
+import vesspaimg from "../assets/projects/vesspa.png";
 
 export interface NavItem {
   label: string;
@@ -145,7 +145,6 @@ export const education: TimelineItem[] = [
       // 'Developed communication and teamwork skills through group academic projects.',
     ],
   },
-  
 ];
 
 export const techStack: TechStackItem[] = [
@@ -192,22 +191,14 @@ export const visualHighlights: HighlightItem[] = [
     span: "tall",
     image: ruppGroupPhoto4,
   },
-  { title: "...", 
-    tone: "orange", 
-    span: "tall" ,
-    image: ruppGroupPhoto5,
-  },
+  { title: "...", tone: "orange", span: "tall", image: ruppGroupPhoto5 },
   {
     title: "Final Defense At ANT Training Center",
     tone: "violet",
     span: "tall",
     image: ruppGroupPhoto3,
   },
-  { title: "...", 
-    tone: "silver", 
-    span: "normal" ,
-    image: ruppGroupPhoto6,
-  },
+  { title: "...", tone: "silver", span: "normal", image: ruppGroupPhoto6 },
 ];
 
 export const featuredProjects: ProjectItem[] = [
@@ -260,16 +251,10 @@ export const featuredProjects: ProjectItem[] = [
 
 export const uxUiProjects: ProjectItem[] = [
   {
-    title: "UX/UI Design — Khmer News Portal",
-    description: [
-      "Designed a clean, readable news experience tailored for Khmer-speaking users in Cambodia.",
-      "Created wireframes and high-fidelity mockups for homepage, article detail, and category pages.",
-      "Built a responsive layout system with consistent typography, spacing, and color tokens.",
-      "Designed dark mode variants to improve reading comfort in low-light environments.",
-      "Planned intuitive navigation for browsing, search, and category filtering on mobile and desktop.",
-      "Delivered admin dashboard UI for content management flows (add, edit, delete articles).",
-    ],
-    stack: ["Figma", "Adobe XD", "Adobe Photoshop"],
+    title: "Khmer News Portal — Responsive Mockup",
+    description:
+      "Multi-device mockup showcasing the responsive news portal layout across desktop, laptop, tablet, and mobile.",
+    stack: ["Adobe Photoshop"],
     tone: "silver",
     image: khmerNewsUxUi,
     alt: "Khmer News Portal responsive UX/UI mockup on desktop, laptop, tablet, and mobile",
@@ -288,7 +273,24 @@ export const uxUiProjects: ProjectItem[] = [
     ],
     stack: ["Figma", "Adobe XD", "Adobe Photoshop"],
     tone: "silver",
-    image: khmerNewsUxUi,
+    image: vesspaimg,
+    alt: "Khmer News Portal responsive UX/UI mockup on desktop, laptop, tablet, and mobile",
+    github: "https://github.com/layheangtob-art",
+    live: "https://www.figma.com/",
+  },
+  {
+    title: "UX/UI Design — Khmer News Portal",
+    description: [
+      "Designed a clean, readable news experience tailored for Khmer-speaking users in Cambodia.",
+      "Created wireframes and high-fidelity mockups for homepage, article detail, and category pages.",
+      "Built a responsive layout system with consistent typography, spacing, and color tokens.",
+      "Designed dark mode variants to improve reading comfort in low-light environments.",
+      "Planned intuitive navigation for browsing, search, and category filtering on mobile and desktop.",
+      "Delivered admin dashboard UI for content management flows (add, edit, delete articles).",
+    ],
+    stack: ["Figma", "Adobe XD", "Adobe Photoshop"],
+    tone: "silver",
+    image: vesspaimg,
     alt: "Khmer News Portal responsive UX/UI mockup on desktop, laptop, tablet, and mobile",
     github: "https://github.com/layheangtob-art",
     live: "https://www.figma.com/",

@@ -1048,6 +1048,10 @@ button {
   .experience-item.is-visible .experience-card:hover {
     transform: none;
   }
+
+  .projects-carousel__track {
+    transition: none;
+  }
 }
 
 .section-heading {
@@ -1216,6 +1220,112 @@ button {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 20px;
+}
+
+.projects-carousel {
+  display: grid;
+  gap: 16px;
+}
+
+.projects-carousel__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.projects-carousel__count {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.projects-carousel__controls {
+  display: flex;
+  gap: 8px;
+}
+
+.projects-carousel__button {
+  width: 38px;
+  height: 38px;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.72);
+  color: #f8fafc;
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+
+.projects-carousel__button:hover {
+  border-color: rgba(56, 189, 248, 0.4);
+  background: rgba(30, 41, 59, 0.9);
+  transform: translateY(-1px);
+}
+
+.projects-carousel__viewport {
+  overflow: hidden;
+  border-radius: 18px;
+}
+
+.projects-carousel__track {
+  display: flex;
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.projects-carousel__slide {
+  flex: 0 0 100%;
+  min-width: 100%;
+}
+
+.project-card--carousel {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  min-height: 320px;
+}
+
+.project-card--carousel:hover {
+  transform: none;
+}
+
+.project-card--carousel .project-preview {
+  min-height: 100%;
+}
+
+.project-card--carousel .project-image {
+  min-height: 100%;
+}
+
+.project-card--carousel .project-copy {
+  display: flex;
+  flex-direction: column;
+  max-height: 420px;
+  overflow-y: auto;
+}
+
+.projects-carousel__dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.projects-carousel__dot {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(148, 163, 184, 0.35);
+  cursor: pointer;
+  transition: width 0.25s ease, background 0.25s ease;
+}
+
+.projects-carousel__dot.is-active {
+  width: 22px;
+  background: #38bdf8;
 }
 
 .project-card {
@@ -1675,6 +1785,19 @@ button {
     font-size: 0.76rem;
     padding: 7px 12px;
     gap: 8px;
+  }
+
+  .project-card--carousel {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .project-card--carousel .project-preview {
+    min-height: 220px;
+  }
+
+  .project-card--carousel .project-copy {
+    max-height: none;
   }
 }
 
