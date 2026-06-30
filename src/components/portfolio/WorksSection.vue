@@ -1,16 +1,27 @@
 <script setup lang="ts">
 import type { ProjectItem } from "../../data/portfolio";
 
-defineProps<{
-  items: ProjectItem[];
-}>();
+withDefaults(
+  defineProps<{
+    items: ProjectItem[];
+    sectionId?: string;
+    title?: string;
+    subtitle?: string;
+  }>(),
+  {
+    sectionId: "projects",
+    title: "Featured Projects",
+    subtitle:
+      "Selected builds that combine clean UI, practical engineering, and real product thinking.",
+  },
+);
 </script>
 
 <template>
-  <section id="projects" class="section-block projects-section">
+  <section :id="sectionId" class="section-block projects-section">
     <header class="section-heading">
-      <h2>Featured Projects</h2>
-      <p>Selected builds that combine clean UI, practical engineering, and real product thinking.</p>
+      <h2>{{ title }}</h2>
+      <p>{{ subtitle }}</p>
     </header>
 
     <div class="projects-grid">

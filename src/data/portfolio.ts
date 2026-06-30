@@ -10,6 +10,8 @@ import ruppGroupPhoto5 from "../assets/highlights/rupp5.jpg";
 import ruppGroupPhoto6 from "../assets/highlights/rupp6.png";
 import khmerNewsPortal from "../assets/projects/1.png";
 import wearplus from "../assets/projects/2.png";
+import khmerNewsUxUi from "../assets/projects/khmer-news-ux-ui.png";
+
 
 export interface NavItem {
   label: string;
@@ -133,7 +135,7 @@ export const education: TimelineItem[] = [
     period: "2022 - Present",
     company: "Australian Centre of Education",
     title: "English Language Program (GEP)",
-    roleTag: "School",
+    roleTag: "English",
     logo: aecLogo,
     // initials: 'PS',
     accent: "cyan",
@@ -143,6 +145,7 @@ export const education: TimelineItem[] = [
       // 'Developed communication and teamwork skills through group academic projects.',
     ],
   },
+  
 ];
 
 export const techStack: TechStackItem[] = [
@@ -252,6 +255,43 @@ export const featuredProjects: ProjectItem[] = [
     stack: ["TypeScript", "Vue", "Charts"],
     tone: "dark",
     github: "https://github.com/layheangtob-art",
+  },
+];
+
+export const uxUiProjects: ProjectItem[] = [
+  {
+    title: "UX/UI Design — Khmer News Portal",
+    description: [
+      "Designed a clean, readable news experience tailored for Khmer-speaking users in Cambodia.",
+      "Created wireframes and high-fidelity mockups for homepage, article detail, and category pages.",
+      "Built a responsive layout system with consistent typography, spacing, and color tokens.",
+      "Designed dark mode variants to improve reading comfort in low-light environments.",
+      "Planned intuitive navigation for browsing, search, and category filtering on mobile and desktop.",
+      "Delivered admin dashboard UI for content management flows (add, edit, delete articles).",
+    ],
+    stack: ["Figma", "Adobe XD", "Adobe Photoshop"],
+    tone: "silver",
+    image: khmerNewsUxUi,
+    alt: "Khmer News Portal responsive UX/UI mockup on desktop, laptop, tablet, and mobile",
+    github: "https://github.com/layheangtob-art",
+    live: "https://www.figma.com/",
+  },
+  {
+    title: "UX/UI Design — Khmer News Portal",
+    description: [
+      "Designed a clean, readable news experience tailored for Khmer-speaking users in Cambodia.",
+      "Created wireframes and high-fidelity mockups for homepage, article detail, and category pages.",
+      "Built a responsive layout system with consistent typography, spacing, and color tokens.",
+      "Designed dark mode variants to improve reading comfort in low-light environments.",
+      "Planned intuitive navigation for browsing, search, and category filtering on mobile and desktop.",
+      "Delivered admin dashboard UI for content management flows (add, edit, delete articles).",
+    ],
+    stack: ["Figma", "Adobe XD", "Adobe Photoshop"],
+    tone: "silver",
+    image: khmerNewsUxUi,
+    alt: "Khmer News Portal responsive UX/UI mockup on desktop, laptop, tablet, and mobile",
+    github: "https://github.com/layheangtob-art",
+    live: "https://www.figma.com/",
   },
 ];
 

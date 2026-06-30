@@ -16,6 +16,7 @@ import {
   navItems,
   stats,
   techStack,
+  uxUiProjects,
   visualHighlights,
 } from "./data/portfolio";
 </script>
@@ -45,6 +46,12 @@ import {
       <SkillsSection :items="techStack" />
       <VisualHighlightsSection :items="visualHighlights" />
       <WorksSection :items="featuredProjects" />
+      <WorksSection
+        section-id="ux-ui"
+        title="Featured UX/UI"
+        subtitle="Selected designs that focus on clarity, usability, and polished visual storytelling."
+        :items="uxUiProjects"
+      />
       <AchievementsSection :items="achievements" />
       <SiteFooter />
     </main>
